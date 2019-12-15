@@ -80,4 +80,27 @@ public class R3Vector {
         A.NewZ = in.nextInt();
         return new R3Vector(A.NewX, A.NewY, A.NewZ);
     }
+    public void rotateOX(double angle) {
+        double fakeY = NewY;
+        NewY = (float) (NewY*Math.cos(Math.toRadians(angle))+NewZ*Math.sin(Math.toRadians(angle)));
+        NewZ = (float) -(fakeY*Math.sin(Math.toRadians(angle))+NewZ*Math.cos(Math.toRadians(angle)));
+    }
+
+    public void rotateOY(double angle) {
+        double fakeX = NewX;
+        NewX = (float) ( NewX*Math.cos(Math.toRadians(angle))+NewZ*Math.sin(Math.toRadians(angle)));
+        NewZ = (float) -(fakeX*Math.sin(Math.toRadians(angle))+NewZ*Math.cos(Math.toRadians(angle)));
+    }
+
+    public void rotateOZ(double angle) {
+        double fakeX = NewX;
+        NewX = (float) (NewX*Math.cos(Math.toRadians(angle))-NewY*Math.sin(Math.toRadians(angle)));
+        NewY = (float) -(fakeX*Math.sin(Math.toRadians(angle))+NewY*Math.cos(Math.toRadians(angle)));
+    }
+
+    public void rotate(double angleX, double angleY, double angleZ) {
+        rotateOX(angleX);
+        rotateOY(angleY);
+        rotateOZ(angleZ);
+    }
 }

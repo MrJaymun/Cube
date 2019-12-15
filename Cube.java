@@ -1,8 +1,4 @@
 import java.util.Scanner;
-
-//В моем коде косяк, поэтому я наглым образом взял код у Кирилла
-//Взял до занятие, на занятии все делал сам
-//Очень стыдно, уже извинился перед ним
 public class Cube {
     public static void main(String[] args) {
         int x,y,z;

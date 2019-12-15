@@ -1,5 +1,4 @@
 import java.util.Scanner;
-
 public class Facet {
     private  R3Vector[] vertex = new R3Vector[4];
     public Facet(R3Vector v1,R3Vector v2,R3Vector v3,R3Vector v4){
@@ -27,4 +26,3 @@ public class Facet {
         }
     }
 }
-
